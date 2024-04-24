@@ -1,6 +1,8 @@
 jQuery(document).ready(function( $ ){
 	let svgs = [];
 	function createSVG(element1Selector, element2Selector, posicaoElemento1 = 'central', posicaoElemento2 = 'central', offSetVertical1 = 0, offSetHorizontal1 = 0, offSetVertical2 = 0, offSetHorizontal2 = 0, cor = '#000000', espessura = 2, raio = 3, animacao = 'ever', retaPura= false){ 
+	 //ideia boa é transformar o offset em valor percentual
+	 //outra ideia interessante é adicionar o offset para linha central
 	 if (posicaoElemento1 === undefined) posicaoElemento1 = 'central';
 	 if (posicaoElemento2 === undefined) posicaoElemento2 = 'central';
 	 if (offSetHorizontal1 === undefined) offSetHorizontal1 = 0;
@@ -10,7 +12,7 @@ jQuery(document).ready(function( $ ){
 	 if (cor === undefined) cor = '#000000'; 
 	 if (espessura === undefined) espessura = 2; 
 	 if (raio === undefined) raio = 3; 
-	 if (animacao === undefined) animacao = 'ever';
+	 if (animacao === undefined) animacao = 'ever'; //once e never
 	 if (retaPura === undefined) retaPura = false; 
 		let elemento1 = document.querySelector(element1Selector);
 		let elemento2 = document.querySelector(element2Selector);
@@ -124,8 +126,7 @@ function handleResize() {
         handleResize();
     }
     
-createSVG(".elemento1", ".elemento2",  'central', 'esquerda', 0, 30, -3, 80, '#F9AD03', 4, 5, 'ever', false);
-createSVG(".elemento3", ".elemento4", 'central', 'esquerda', 0, 30, -3, 80, '#F9AD03', 4, 5, 'once', false);
-createSVG(".elemento5", ".elemento6", 'central', 'esquerda', 0, 30, -3, 80, '#F9AD03', 4, 5, 'never', false);
-
+createSVG(".elemento1", ".elemento2",  'central', 'esquerda', 15, -10, 30, 50, '#F9AD03', 1.5, 5, 'ever', false);
+createSVG(".elemento3", ".elemento4", 'central', 'esquerda', 15, -10, 150, 295, '#F9AD03', 1.5, 5, 'ever', false);
+createSVG(".elemento5", ".elemento6", 'central', 'esquerda', 15, -10, 150, 295, '#F9AD03', 1.5, 5, 'ever', false);
 });
