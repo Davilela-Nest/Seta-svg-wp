@@ -1,8 +1,6 @@
 jQuery(document).ready(function( $ ){
 	let svgs = [];
 	
-	//uma ideia legal seria criar uma reta diferente, ela desce um pouco vai para perto de uma das laterias da tela desce até perto do elemento e vai até o elemento2
-	
 	function createSVG(element1Selector, element2Selector, options){ 
 		let defaults = {
 			posicaoElemento1: 'central',
